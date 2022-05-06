@@ -1,0 +1,29 @@
+[
+  {
+    "name"  : "trip",
+    "singer"  : "Axero（Samuel Périn）",
+    "album" : "Trip",
+    "time"  : "03:08",
+    "link_url"  : "https://zcx-image.oss-cn-beijing.aliyuncs.com/music/%E6%B1%9F%E5%8D%97.mp3",
+    "cover"  : "./source/trip_cover.jpg",
+    "linklrc"  : "./source/trip_lrc.txt"
+  },
+  {
+    "name"  : "Rise（登峰造极境）",
+    "singer"  : "The Glitch Mob / Mako / The Word Alive",
+    "album" : "2018英雄联盟全球总决赛",
+    "time"  : "03:12",
+    "link_url"  : "./source/rise.mp3",
+    "cover"  : "./source/rise_cover.jpg",
+    "linklrc"  : "./source/rise_lrc.txt"
+  },
+  {
+    "name"  : "Something Just Like This",
+    "singer"  : "The Chainsmokers / Coldplay",
+    "album" : "Something Just Like This",
+    "time"  : "04:07",
+    "link_url"  : "./source/SomethingJustLikeThis.mp3",
+    "cover"  : "./source/somthinglikethis_cover.jpg",
+    "linklrc"  : "./source/somthinglikethis_lrc.txt"
+  }
+]
