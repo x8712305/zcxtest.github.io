@@ -1,42 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="60"><!--refresh per 60 seconds-->
-    <title>Seraphine Wall</title>
-    <link href="css/style_PhotoWall.css" rel="stylesheet" type="text/css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title></title>
+	<link rel="stylesheet" href="css/player.css">
 </head>
-<body onload="variableImage()">
-    <script type="text/javascript">
-        function variableImage(){
-            var len  = 9;
-            for(var i = 0;i<12;i++){
-                var NowFrame= i;
-                if((i+1)>len){
-                    NowFrame=parseInt(Math.random()* len);
-                }
-                console.log(NowFrame);
-//                document.getElementById("showImage"+i).src="images/"+NowFrame+".jpg";
-                document.getElementById("showImage"+i).src="https://asmrku.oss-cn-chengdu.aliyuncs.com/pic/"+NowFrame+".jpg";
-            }
-        }
-    </script>
-    <div>
-
-        <img id="showImage0" width="384px" height="216px"/>
-        <img id="showImage1" width="576" height="324"/>
-        <img id="showImage2" width="384" height="216"/>
-        <img id="showImage3" width="384" height="216"/>
-        <img id="showImage4" width="576" height="324"/>
-        <img id="showImage5" width="384" height="216"/>
-        <img id="showImage6" width="864" height="486"/>
-        <img id="showImage7" width="576" height="324"/>
-        <img id="showImage8" width="672" height="378"/>
-        <img id="showImage9" width="384" height="216"/>
-        <img id="showImage10" width="576" height="324"/>
-        <img id="showImage11" width="576" height="324"/>
-
+<body>
+<div id="main"><h1 > 请点击左侧播放器 </h1></div>
+<div id="QPlayer">
+<div id="pContent">
+	<div id="player">
+		<span class="cover"></span>
+		<div class="ctrl">
+			<div class="musicTag marquee">
+				<strong>Title</strong>
+				 <span> - </span>
+				<span class="artist">Artist</span>
+			</div>
+			<div class="progress">
+				<div class="timer left">0:00</div>
+				<div class="contr">
+					<div class="rewind icon"></div>
+					<div class="playback icon"></div>
+					<div class="fastforward icon"></div>
+				</div>
+				<div class="right">
+					<div class="liebiao icon"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="ssBtn">
+	        <div class="adf"></div>
     </div>
+</div>
+<ol id="playlist"></ol>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.marquee.min.js"></script>
+
+<script>
+	var	playlist = [
+		{title:"孤独",artist:"邓紫棋",mp3:"https://asmrku.oss-cn-chengdu.aliyuncs.com/mp3/gudu.mp3",cover:"http://p2.music.126.net/OAaxmYfsDZNXPk9H_h4pMQ==/109951165369903131.jpg?param=130y130"},
+		{title:"光年之外",artist:"邓紫棋",mp3:"https://asmrku.oss-cn-chengdu.aliyuncs.com/mp3/guangnianzhiwai.mp3",cover:"http://p2.music.126.net/fkqFqMaEt0CzxYS-0NpCog==/18587244069235039.jpg?param=130y130",},
+
+];
+  var isRotate = true;
+  var autoplay = false;
+</script>
+<script src="js/player.js"></script>
+<script>
+
+function bgChange(){
+	var lis= $('.lib');
+	for(var i=0; i<lis.length; i+=2)
+	lis[i].style.background = 'rgba(246, 246, 246, 0.5)';
+}
+window.onload = bgChange;
+</script>
+
 </body>
 </html>
